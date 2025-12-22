@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rules &amp; Prizes - GreenNeighborhood</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2e22", 
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "1rem", 
+                        "xl": "1.5rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Accordion animation support */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#2a3c30] bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight hidden sm:block">GreenNeighborhood</h2>
+</div>
+<div class="flex items-center gap-4 sm:gap-8">
+<nav class="hidden md:flex items-center gap-6 lg:gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Leaderboard</a>
+<a class="text-sm font-bold text-primary leading-normal" href="#">Rules &amp; Prizes</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Community</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#111813] text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-105 transition-all shadow-[0_0_15px_rgba(19,236,91,0.3)]">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center w-full">
+<div class="w-full max-w-[960px] px-4 sm:px-6 lg:px-8 py-5 flex flex-col gap-12">
+<!-- Hero Section -->
+<section class="@container">
+<div class="flex flex-col gap-8 py-6 md:py-10 md:flex-row items-center">
+<div class="w-full md:w-1/2 aspect-video bg-center bg-no-repeat bg-cover rounded-xl shadow-lg" data-alt="Abstract colorful pattern representing clean energy and community connection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxddtqHtqXNOmK248pIhbIcMjb-GTNPjrOjazJLq0GWGludFRG5qr8SS03BouH_5M1Wv0VxvHpyYc3X4VEfvyvQsp0KkUgkbNDv3arax7lC0pvkgku_HgYWRzhMcp1UUUXwv1oy_QmqFcdGNm5pHYJJkPezCbz3MPLXLXG5Jl9B_5p8xnd_4O45_NeED5XEUp4EdiUMmZ7U7TfR6mpTETlN0EErO9JBassWv-_DAZP0JYP3uQ87sLxKa2n4ViN8GpD40Awv5D5SbI");'>
+</div>
+<div class="flex flex-col gap-6 md:w-1/2 md:pl-6 justify-center">
+<div class="flex flex-col gap-3 text-left">
+<h1 class="text-4xl md:text-5xl font-black leading-[1.1] tracking-tight">
+                                    Rules &amp; Prizes
+                                </h1>
+<p class="text-base md:text-lg font-normal leading-relaxed text-neutral-600 dark:text-neutral-300">
+                                    Save resources, win big for your community. Join the challenge to lower your utility bills and earn amazing rewards.
+                                </p>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 sm:flex-none cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary text-[#111813] text-base font-bold tracking-wide hover:brightness-105 transition-all shadow-lg shadow-primary/20">
+                                    Join Competition
+                                </button>
+<button class="flex-1 sm:flex-none cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-transparent border-2 border-[#e5e7eb] dark:border-[#2a3c30] hover:border-primary dark:hover:border-primary text-base font-bold transition-all">
+                                    Learn More
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Winning Criteria Section -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">emoji_events</span>
+<h2 class="text-[22px] font-bold leading-tight">Winning Criteria</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Electricity Card -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] shadow-sm flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-yellow-500">bolt</span>
+</div>
+<div class="z-10 flex items-center gap-3 text-yellow-600 dark:text-yellow-400">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+<span class="font-bold uppercase tracking-wider text-sm">50% of Score</span>
+</div>
+<div class="z-10">
+<h3 class="text-xl font-bold mb-2">Electricity Savings</h3>
+<p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                                    Calculated based on the percentage reduction of kW/h usage compared to your household's usage in the same months last year.
+                                </p>
+</div>
+</div>
+<!-- Water Card -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] shadow-sm flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-blue-500">water_drop</span>
+</div>
+<div class="z-10 flex items-center gap-3 text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+<span class="font-bold uppercase tracking-wider text-sm">50% of Score</span>
+</div>
+<div class="z-10">
+<h3 class="text-xl font-bold mb-2">Water Conservation</h3>
+<p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                                    Measured by the reduction in gallons used per capita. Smart meter data is verified weekly to ensure accuracy.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Prizes Section -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">redeem</span>
+<h2 class="text-[22px] font-bold leading-tight">Prizes &amp; Rewards</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Runner Up -->
+<div class="order-2 md:order-1 flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-40 bg-neutral-100 dark:bg-neutral-800 bg-center bg-cover relative" data-alt="Modern smart thermostat device on a wall" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDEjmH8OkfzzU9KTvmC9w9iZQLBtP5DVGUuUZJTjLvFkVMjQbFMrnW5HG53E9pj4l_py8dl7WpoAJ0lTYTlD5H0mzh037pjllGA8uJWcyWD0sSciuSfTiYs860u9muyuwh9QrscdSUPhSdYxkSY3A8D566FeIg4RksHYujleSbOYJz2n1ST-oAtwZKvVNXSn9o8gMHW8-bFF0nzf8kLxDBxyFJCAEIe1lsGw15rp_hlF4_6HS3foUU9hxCighKQbcMkTsgLfvduaY");'>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm">Runner Up</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold mb-2">Smart Home Monitor</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 flex-1">A state-of-the-art energy monitoring system to help you keep saving year-round.</p>
+<div class="flex items-center gap-2 text-sm font-medium text-neutral-500">
+<span class="material-symbols-outlined text-lg">home_iot_device</span>
+<span>Valued at $150</span>
+</div>
+</div>
+</div>
+<!-- Grand Prize -->
+<div class="order-1 md:order-2 flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border-2 border-primary overflow-hidden shadow-xl transform md:-translate-y-4 relative">
+<div class="absolute top-0 w-full bg-primary text-[#111813] text-center py-1 text-xs font-black uppercase tracking-widest z-10">
+                                Grand Prize
+                            </div>
+<div class="h-48 bg-neutral-100 dark:bg-neutral-800 bg-center bg-cover mt-6" data-alt="Golden trophy cup sitting on a wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0qj6LOK9RU9-85mmfieRIBUltUUUlZTn8y43TcIICTR9x0TapUd1MNq7ZK1AcZ_KAyT-EUP0nINjgfN9HCeVqzoYWuqTGmAD8l5kngdv-ksGJGbPaO-RPFHBAXA3D9dRFmQpIwreoFCoukCUJ80cGwczkv3l0sD7IzEsMDZmw2uClI8lbTYvTo1eRrPgAGsR5CBnbghnHM4m5rafelW1bB4GhK8gPjoq0MmEpw2_Vp2V6ytC66bqpRXS8jNkUukETlogjDmokBpE");'>
+</div>
+<div class="p-6 flex flex-col flex-1 items-center text-center">
+<h3 class="text-xl font-bold mb-2">1 Month Free Utilities</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4">Plus the coveted "Green Neighbor" Community Trophy displayed in your yard.</p>
+<button class="w-full mt-auto py-2 rounded-lg bg-primary/10 text-[#116e32] dark:text-primary font-bold text-sm hover:bg-primary/20 transition-colors">
+                                    See Leaderboard
+                                </button>
+</div>
+</div>
+<!-- Community Goal -->
+<div class="order-3 flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-40 bg-neutral-100 dark:bg-neutral-800 bg-center bg-cover relative" data-alt="People eating pizza at a block party" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAupHE_TMPyeKEWw0mWX8-1npTylg-64F0Jf0rK2N14wvVXhSXd-1ZeQMdRUnDpyd_hIv-KJR0-QXk_DwbzK646fvDodyM9v8Q4aTVJFsnNKTvW5VqVrnKZ4hbWRSIGvH8ApWJ-nqN1pOYaNqNHUi_Ouc95gfn7nsQviMMQkgj8kNuc1mU39Ho51DiAQ4q4avPSkAEJJjz3nP3vqOzZqlLP2RKi5el9mXL7R1C60KWfFQsp2XggL7WjfvHenou5HeeoT1MartHhGr8");'>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm">Community Goal</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold mb-2">Block Pizza Party</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 flex-1">If the whole neighborhood saves 10% collectively, everyone gets a slice!</p>
+<div class="flex items-center gap-2 text-sm font-medium text-neutral-500">
+<span class="material-symbols-outlined text-lg">local_pizza</span>
+<span>Community Wide</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Timeline) -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">info</span>
+<h2 class="text-[22px] font-bold leading-tight">How It Works</h2>
+</div>
+<div class="grid grid-cols-[40px_1fr] gap-x-4 px-2">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-1 pt-2">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-[#116e32] dark:text-primary">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="w-[2px] bg-[#dbe6df] dark:bg-[#2a3c30] h-full grow my-2"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8 pt-1">
+<div class="flex justify-between items-baseline">
+<p class="text-base font-bold leading-normal">Sign Up</p>
+<p class="text-[#61896f] dark:text-neutral-500 text-sm font-medium">By May 1st</p>
+</div>
+<p class="text-sm text-neutral-500 mt-1">Create your account and link your utility provider.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-[#dbe6df] dark:bg-[#2a3c30] h-2"></div>
+<div class="flex items-center justify-center size-8 rounded-full bg-neutral-100 dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700">
+<span class="material-symbols-outlined text-[20px] text-neutral-500">eco</span>
+</div>
+<div class="w-[2px] bg-[#dbe6df] dark:bg-[#2a3c30] h-full grow my-2"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8 pt-1">
+<div class="flex justify-between items-baseline">
+<p class="text-base font-medium leading-normal">Save Energy</p>
+<p class="text-[#61896f] dark:text-neutral-500 text-sm font-medium">May - Aug</p>
+</div>
+<p class="text-sm text-neutral-500 mt-1">Implement saving tips. Compete in daily challenges.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-[#dbe6df] dark:bg-[#2a3c30] h-2"></div>
+<div class="flex items-center justify-center size-8 rounded-full bg-neutral-100 dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700">
+<span class="material-symbols-outlined text-[20px] text-neutral-500">bar_chart</span>
+</div>
+<div class="w-[2px] bg-[#dbe6df] dark:bg-[#2a3c30] h-full grow my-2"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8 pt-1">
+<div class="flex justify-between items-baseline">
+<p class="text-base font-medium leading-normal">Track Progress</p>
+<p class="text-[#61896f] dark:text-neutral-500 text-sm font-medium">Weekly</p>
+</div>
+<p class="text-sm text-neutral-500 mt-1">Check the leaderboard. See how your block compares.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center gap-1 pb-2">
+<div class="w-[2px] bg-[#dbe6df] dark:bg-[#2a3c30] h-2"></div>
+<div class="flex items-center justify-center size-8 rounded-full bg-neutral-100 dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700">
+<span class="material-symbols-outlined text-[20px] text-neutral-500">emoji_events</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col pt-1">
+<div class="flex justify-between items-baseline">
+<p class="text-base font-medium leading-normal">Win Prizes</p>
+<p class="text-[#61896f] dark:text-neutral-500 text-sm font-medium">Sept 1st</p>
+</div>
+<p class="text-sm text-neutral-500 mt-1">Top savers and lucky draw winners announced.</p>
+</div>
+</div>
+</section>
+<!-- Rules & FAQ Accordion -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">gavel</span>
+<h2 class="text-[22px] font-bold leading-tight">Fine Print &amp; FAQs</h2>
+</div>
+<div class="flex flex-col gap-4">
+<details class="group bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] open:shadow-md transition-all">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold select-none">
+<span>Who is eligible to participate?</span>
+<span class="material-symbols-outlined transform group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                You must be a resident of the GreenValley specific zip codes (90210, 90211). Both homeowners and renters are eligible. You must have an active utility account that has been open for at least 12 months to establish a baseline.
+                            </div>
+</details>
+<details class="group bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] open:shadow-md transition-all">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold select-none">
+<span>How is data verified?</span>
+<span class="material-symbols-outlined transform group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                We connect securely to your utility provider's API. We only read monthly usage data; we do not have access to billing or payment information. All data is anonymized on the public leaderboard.
+                            </div>
+</details>
+<details class="group bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3c30] open:shadow-md transition-all">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold select-none">
+<span>Can I join mid-competition?</span>
+<span class="material-symbols-outlined transform group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                Yes! However, your score will be pro-rated. To be eligible for the Grand Prize, you must participate for at least 3 months of the 4-month competition period.
+                            </div>
+</details>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-[#e5e7eb] dark:border-[#2a3c30] py-10">
+<div class="flex flex-col items-center justify-center gap-6 text-center">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">eco</span>
+<span class="font-bold text-lg text-[#111813] dark:text-white">GreenNeighborhood</span>
+</div>
+<div class="flex gap-6 text-sm font-medium text-neutral-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<p class="text-xs text-neutral-400">© 2024 GreenNeighborhood Initiative. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

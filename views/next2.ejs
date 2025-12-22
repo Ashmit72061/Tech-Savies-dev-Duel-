@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neighbor Comparison - EcoNeighbor</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c3326",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark border-b border-[#f0f4f2] dark:border-[#2a4535] px-4 md:px-10 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">EcoNeighbor</h2>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors text-sm font-medium" href="#">Dashboard</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors text-sm font-medium" href="#">My Usage</a>
+<a class="text-[#111813] dark:text-white font-semibold text-sm relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:-bottom-5 after:left-0" href="#">Competition</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors text-sm font-medium" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture of a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCq8tofMT66S4H3yTOQIC1AFSicgj_meK2OHdLXbGbR_DChY-AH4Yl9Xg6m9lTOrGOKvAO9QH1TL24WqBfukNmnkvkc7uk0YecXPdzo5ngF2cyE9CCEClcqvrqZRa6cGqYGbLVQsErVV_ScGPgO88cQoggJqRpRKqFmQHSuVrX3ROA0yJmhQ2IJKfG7k-KCcBKJTijDp29wYMfzvK7yj6Lh3mvqBd0aMBPtkGwTHtbGBJeze2mzlqqB_tdiVzRGD_stmQlOfBhoknw");'>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 md:px-10 py-8">
+<!-- Header & Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div class="flex flex-col gap-2 max-w-2xl">
+<h1 class="text-3xl md:text-4xl font-black tracking-tight">Neighbor Comparison</h1>
+<p class="text-gray-600 dark:text-gray-300 text-base">See how you stack up against the block. Compare savings and compete for a greener neighborhood.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-center w-full md:w-auto">
+<!-- Time Period Select -->
+<div class="relative min-w-[160px] w-full sm:w-auto">
+<select class="appearance-none w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#2a4535] text-sm font-medium rounded-lg py-2.5 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent cursor-pointer">
+<option>This Month</option>
+<option>Last Month</option>
+<option>Year to Date</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<!-- Segmented Control -->
+<div class="bg-gray-100 dark:bg-[#15261d] p-1 rounded-lg flex w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-1.5 rounded-md bg-white dark:bg-surface-dark shadow-sm text-xs font-semibold text-[#111813] dark:text-white transition-all">
+                        Electricity
+                    </button>
+<button class="flex-1 sm:flex-none px-4 py-1.5 rounded-md text-gray-500 dark:text-gray-400 text-xs font-medium hover:text-[#111813] dark:hover:text-white transition-all">
+                        Water
+                    </button>
+<button class="flex-1 sm:flex-none px-4 py-1.5 rounded-md text-gray-500 dark:text-gray-400 text-xs font-medium hover:text-[#111813] dark:hover:text-white transition-all">
+                        Combined
+                    </button>
+</div>
+</div>
+</div>
+<!-- Hero Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<!-- Rank Card -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-[#2a4535] shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-primary">emoji_events</span>
+</div>
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Current Rank</p>
+<div class="flex items-baseline gap-2">
+<h3 class="text-3xl font-bold">4th</h3>
+<span class="text-sm text-gray-500 dark:text-gray-400">in Neighborhood</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-1 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+<span>Up 2 spots this week!</span>
+</div>
+</div>
+<!-- Savings Card -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-[#2a4535] shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Estimated Savings</p>
+<h3 class="text-3xl font-bold">$45.50</h3>
+</div>
+<div class="mt-4 flex items-center gap-1 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+$12.00 vs Last Month</span>
+</div>
+</div>
+<!-- Comparison Card -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-[#2a4535] shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Vs. Neighborhood Avg</p>
+<h3 class="text-3xl font-bold text-primary">-15%</h3>
+</div>
+<div class="mt-4 flex items-center gap-1 text-gray-500 dark:text-gray-400 font-medium text-sm">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>You're using less than average</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Chart & Comparison -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Chart Section -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-[#2a4535] shadow-sm p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Usage Trends</h3>
+<div class="flex items-center gap-4 text-xs font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-gray-600 dark:text-gray-300">You</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+<span class="text-gray-600 dark:text-gray-300">Avg Neighbor</span>
+</div>
+</div>
+</div>
+<!-- CSS Chart Mock -->
+<div class="relative h-64 w-full flex items-end justify-between gap-2 sm:gap-4 pt-8">
+<!-- Y-axis lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="w-full h-px bg-gray-100 dark:bg-[#2a4535]"></div>
+<div class="w-full h-px bg-gray-100 dark:bg-[#2a4535]"></div>
+<div class="w-full h-px bg-gray-100 dark:bg-[#2a4535]"></div>
+<div class="w-full h-px bg-gray-100 dark:bg-[#2a4535]"></div>
+<div class="w-full h-px bg-gray-100 dark:bg-[#2a4535]"></div>
+</div>
+<!-- Bars Week 1 -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end z-10 group cursor-pointer">
+<div class="relative w-full flex justify-center items-end gap-1 h-full px-1">
+<div class="w-full max-w-[20px] bg-primary rounded-t-sm h-[60%] transition-all group-hover:bg-[#0ebf48]"></div>
+<div class="w-full max-w-[20px] bg-gray-300 dark:bg-gray-600 rounded-t-sm h-[75%]"></div>
+</div>
+<span class="text-xs text-gray-400 font-medium">Week 1</span>
+</div>
+<!-- Bars Week 2 -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end z-10 group cursor-pointer">
+<div class="relative w-full flex justify-center items-end gap-1 h-full px-1">
+<div class="w-full max-w-[20px] bg-primary rounded-t-sm h-[55%] transition-all group-hover:bg-[#0ebf48]"></div>
+<div class="w-full max-w-[20px] bg-gray-300 dark:bg-gray-600 rounded-t-sm h-[70%]"></div>
+</div>
+<span class="text-xs text-gray-400 font-medium">Week 2</span>
+</div>
+<!-- Bars Week 3 -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end z-10 group cursor-pointer">
+<!-- Tooltip example -->
+<div class="absolute -top-10 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20">
+                                You: 140kWh <br/> Avg: 180kWh
+                            </div>
+<div class="relative w-full flex justify-center items-end gap-1 h-full px-1">
+<div class="w-full max-w-[20px] bg-primary rounded-t-sm h-[45%] transition-all group-hover:bg-[#0ebf48]"></div>
+<div class="w-full max-w-[20px] bg-gray-300 dark:bg-gray-600 rounded-t-sm h-[65%]"></div>
+</div>
+<span class="text-xs text-gray-400 font-medium">Week 3</span>
+</div>
+<!-- Bars Week 4 -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end z-10 group cursor-pointer">
+<div class="relative w-full flex justify-center items-end gap-1 h-full px-1">
+<div class="w-full max-w-[20px] bg-primary rounded-t-sm h-[40%] transition-all group-hover:bg-[#0ebf48]"></div>
+<div class="w-full max-w-[20px] bg-gray-300 dark:bg-gray-600 rounded-t-sm h-[68%]"></div>
+</div>
+<span class="text-xs text-gray-400 font-medium">Week 4</span>
+</div>
+</div>
+</div>
+<!-- Comparison Table -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-[#2a4535] shadow-sm overflow-hidden">
+<div class="p-6 border-b border-gray-100 dark:border-[#2a4535] flex justify-between items-center">
+<h3 class="text-lg font-bold">Head-to-Head</h3>
+<button class="text-primary text-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-[#15261d] text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">
+<th class="px-6 py-4">Participant</th>
+<th class="px-6 py-4 text-right">Usage (kWh)</th>
+<th class="px-6 py-4 text-right">Savings</th>
+<th class="px-6 py-4 text-center">Trend</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100 dark:divide-[#2a4535]">
+<!-- You -->
+<tr class="bg-primary/5 dark:bg-primary/10">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary-dark font-bold text-xs">ME</div>
+<span class="font-bold">You</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-medium">420</td>
+<td class="px-6 py-4 text-right font-medium text-primary">-$15.20</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+<span class="material-symbols-outlined text-[14px] mr-1">trending_down</span> -5%
+                                        </span>
+</td>
+</tr>
+<!-- Average -->
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500">
+<span class="material-symbols-outlined text-sm">groups</span>
+</div>
+<span class="font-medium text-gray-500 dark:text-gray-400">Neighborhood Avg</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-medium text-gray-500">580</td>
+<td class="px-6 py-4 text-right font-medium text-gray-500">--</td>
+<td class="px-6 py-4 text-center text-gray-400">-</td>
+</tr>
+<!-- Neighbor 1 -->
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Portrait of neighbor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4qdK_qfNgVcO2Zo2IAOzhUtWu4hggDzMbu1_F511z2N7vTpKArwd9FCDfqofCfCNpPLbNakBggTsnrJ-U8HnarIie0B4FA4HyDCpongM5OF-JOV7Jbng0KO_dOWuP-HYjiUwtprGLOR-JKkcXp5DfUZ8_6--jYuQGD9kyl_Dj1hG7opy6mRIEG7KbeWzEZ94I-gH92xldwHpGNf19z3IygM83i-sGwVfKb-EpMbYgOayDgxWvvpHR_BGMLTKjoNeGyzQvPrvr-k0')"></div>
+<span class="font-medium">The Wilsons</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-medium">485</td>
+<td class="px-6 py-4 text-right font-medium text-red-500">+$2.40</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">
+<span class="material-symbols-outlined text-[14px] mr-1">trending_up</span> +2%
+                                        </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column: Leaderboard -->
+<div class="flex flex-col gap-6">
+<!-- Leaderboard Widget -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-[#2a4535] shadow-sm p-6">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500">trophy</span>
+<h3 class="text-lg font-bold">Top Savers</h3>
+</div>
+<span class="text-xs font-medium text-gray-500 bg-gray-100 dark:bg-[#15261d] px-2 py-1 rounded">This Month</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- #1 -->
+<div class="flex items-center gap-4 p-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-100 dark:border-yellow-900/20">
+<div class="text-lg font-black text-yellow-600 dark:text-yellow-500 w-6 text-center">1</div>
+<div class="size-10 rounded-full bg-cover bg-center ring-2 ring-yellow-400" data-alt="Top saver profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdug2HskpXKik7dYcR8UrMmS2nKY_kHO5B-GuLHrgTJ3SUl2PcnodJNUzUuo9swVz8Be17LD4LwTTYc3cGiqQjg9mY6roF5X2Dxs-TeXPIlG3_vZQu6JYlwWjnPhudamERwnPk2nJmgRcUUyH4gxqhTgrwIa7L9_D1z3MP995I6J_FvqlFDgiz6xSVVWd6fN4KXn_D4XU3M0Bj4FIIRtlCA62xizEWKAm4SaxQHvt0YDhjN51mHElaYpJg8UUkvI9qpA0VHpQhOg4')"></div>
+<div class="flex-1 min-w-0">
+<p class="font-bold truncate">Sarah J.</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 truncate">Saved 22% vs Avg</p>
+</div>
+</div>
+<!-- #2 -->
+<div class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-[#15261d] transition-colors">
+<div class="text-lg font-bold text-gray-400 w-6 text-center">2</div>
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Second place saver profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABBh1JrpaAoSquUsLKDibWpM714W659WVi1gDSaB2FS8Phb7sDu99oCDjLZg-OoaDBWHU-JFwgPDpwz3JgtfpEGgP5MZg-mZqf4ri1-YfzSAGcqNcWRxiPi5N0yVEF2Lm0ky7c6JGYj_AwWtz9JUkvmuvr5LaTL8R2N01tZomlNYfWeNiR8X163lYhf3p03bRw2QU_Qquj9M1jU3FKvwXE1iisXHlm89DBQIKg5vXn5h8EXYvbRL2qgYQdZG6BIYEDcT4iFSQYr8U')"></div>
+<div class="flex-1 min-w-0">
+<p class="font-bold truncate">Mike Chen</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 truncate">Saved 19% vs Avg</p>
+</div>
+</div>
+<!-- #3 -->
+<div class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-[#15261d] transition-colors">
+<div class="text-lg font-bold text-gray-400 w-6 text-center">3</div>
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Third place saver profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdiUCxgiZ_4-fcTEw-1L9oNtdnHgb62tXFytB5YiOvjnCfsSjtRI29nCarPOWHLLSHWIe8BKFskuKJi1cySXsfEd4YRCIHvN_WLHKt0-ve7YIxtu80rGb4_CIWhb30NWD_5ljLzxpRBa2fUpMsFVg2n69KNBcTheAsZ__SUaq1-1B-tXdIc6h25r9pwvks6fvFQFCw4sh0fzPSWT7ynSpCQYK6TEqglJG14_kmzWjSIwNTnguqpVSS7rmOwalY_osNDbXLO7a1RbM')"></div>
+<div class="flex-1 min-w-0">
+<p class="font-bold truncate">The Rodriguezes</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 truncate">Saved 17% vs Avg</p>
+</div>
+</div>
+<!-- You -->
+<div class="flex items-center gap-4 p-3 rounded-lg bg-primary/10 border border-primary/20 mt-2">
+<div class="text-lg font-bold text-primary-dark w-6 text-center">4</div>
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-primary" data-alt="User profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBK2tsqdX3oOPZrxovW6mvsrTFjYASrTsqbHpyLP4tJCLTj2MV0RoVKpsESdfC9yJdoLce3dQNPGEjUWENT8P_WWPbzrO_9XB2yTSovR6iZkzfl6RlBbhSc0bgzLBFNR9n8rfhmIYNlSPxMoyr8kus6FXXb0t3euFJFMxb3S-925iP7ZSQ86v7S-ngXdObPA4t9CCZIfGXCJWhXVYRUvySQuUMBzNUpkOkgO1Orp5bu3y579mew7EVvxATorE3FTFEcfUMg1kI32Bo')"></div>
+<div class="flex-1 min-w-0">
+<p class="font-bold truncate">You</p>
+<p class="text-xs text-gray-600 dark:text-gray-300 truncate">Saved 15% vs Avg</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Challenge CTA -->
+<div class="bg-gradient-to-br from-primary to-green-400 rounded-xl shadow-lg p-6 text-[#102216]">
+<div class="mb-4">
+<span class="bg-white/30 backdrop-blur-sm p-2 rounded-lg inline-flex mb-3">
+<span class="material-symbols-outlined text-white">diversity_3</span>
+</span>
+<h3 class="text-xl font-black mb-2">Challenge a Neighbor</h3>
+<p class="text-sm font-medium opacity-90 leading-relaxed">Friendly competition drives better results! Invite a friend to compare usage side-by-side.</p>
+</div>
+<button class="w-full bg-[#102216] text-white font-semibold py-3 px-4 rounded-lg hover:bg-black transition-colors flex items-center justify-center gap-2">
+<span>Find Neighbors</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Small Insight Badge -->
+<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-xl p-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-blue-500 mt-0.5">lightbulb</span>
+<div>
+<p class="text-sm font-bold text-blue-900 dark:text-blue-100">Did you know?</p>
+<p class="text-xs text-blue-700 dark:text-blue-300 mt-1">Neighbors who set a specific goal save 2x more on average.</p>
+<a class="text-xs font-bold text-blue-600 dark:text-blue-400 mt-2 inline-block hover:underline" href="#">Set a Goal →</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

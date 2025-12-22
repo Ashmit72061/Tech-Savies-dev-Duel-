@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Competition Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white font-display min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<div class="relative flex w-full flex-col bg-white dark:bg-background-dark border-b border-[#f0f4f2] dark:border-[#1e3a2b]">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-[#111813] dark:text-white">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined !text-3xl">eco</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Eco-Challenge</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Tips</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">My Data</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary hover:bg-green-400 text-[#102216] text-sm font-bold px-4 py-2 rounded-lg transition-colors hidden sm:block">Log Meter Reading</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7pOrv2ucn5I0LK7HMKXYWecE0_v29A79dNQ_5QaVQ0JZmAxNnUL97pVDnA_ERzHCG9xc_caPhJLuZRhf5x8ng2ThC6G4mFkLspQoooJzwTrohiCsRFIxq0pO6Y8XiJe_p_SusExz8wLEu-emOhEvhnsdh9ihTk0sNr9TEyqcLCP8H88WIwuV_sMkscEfv6BRGnST2DHXQpKZrXSwzVPK1fz5xRrtrJsYCqstZDh8aoLUiwC1REk9P05M1ZPKq4D11HD5DZWvDedc");'></div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 px-4 md:px-10 lg:px-40 py-8 flex justify-center">
+<div class="w-full max-w-[1200px] flex flex-col gap-8">
+<!-- Header & Stats Overview -->
+<div class="flex flex-col xl:flex-row gap-6 items-start justify-between">
+<div class="flex flex-col gap-2 max-w-2xl">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em]">Neighborhood Eco-Challenge 2024</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Track our collective impact and see who is leading the charge toward a greener future.</p>
+</div>
+<!-- Quick Stats -->
+<div class="flex gap-4 w-full xl:w-auto flex-wrap">
+<div class="flex-1 xl:flex-none min-w-[140px] bg-white dark:bg-[#1a3324] rounded-xl p-4 shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35]">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">co2</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">CO2 Prevented</span>
+</div>
+<p class="text-2xl font-bold">450kg</p>
+</div>
+<div class="flex-1 xl:flex-none min-w-[140px] bg-white dark:bg-[#1a3324] rounded-xl p-4 shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35]">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">savings</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Saved</span>
+</div>
+<p class="text-2xl font-bold">$1,200</p>
+</div>
+<div class="flex-1 xl:flex-none min-w-[140px] bg-white dark:bg-[#1a3324] rounded-xl p-4 shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35]">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">timer</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Days Left</span>
+</div>
+<p class="text-2xl font-bold">12</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column (Main) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Collective Progress -->
+<section class="bg-white dark:bg-[#1a3324] rounded-xl p-6 shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35]">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-lg font-bold">Neighborhood Goal</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Target: 10,000 kWh Saved</p>
+</div>
+<span class="text-2xl font-bold text-primary">75%</span>
+</div>
+<div class="h-4 w-full bg-[#f0f4f2] dark:bg-black/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-300 flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+                                2,500 kWh to go! We are on track to beat last year's record.
+                            </p>
+</div>
+</section>
+<!-- Leaderboard -->
+<section class="bg-white dark:bg-[#1a3324] rounded-xl shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35] overflow-hidden">
+<div class="p-6 border-b border-[#e5e7eb] dark:border-[#2a4a35] flex flex-wrap justify-between items-center gap-4">
+<h3 class="text-xl font-bold">Leaderboard</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 text-xs font-medium bg-primary text-[#102216] rounded-full">This Week</button>
+<button class="px-3 py-1.5 text-xs font-medium bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full transition-colors">All Time</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-[#f8f9fa] dark:bg-[#152a1d] text-xs uppercase text-slate-500 dark:text-slate-400">
+<tr>
+<th class="px-6 py-4 font-semibold w-16">Rank</th>
+<th class="px-6 py-4 font-semibold">Participant</th>
+<th class="px-6 py-4 font-semibold text-right">Electricity Saved</th>
+<th class="px-6 py-4 font-semibold text-right">Water Saved</th>
+<th class="px-6 py-4 font-semibold text-center">Trend</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#e5e7eb] dark:divide-[#2a4a35]">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#1f3d2b] transition-colors group">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 flex items-center justify-center font-bold">1</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gray-200 bg-cover bg-center" data-alt="Portrait of happy family outdoors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUwC91_ldDzeZ1zvzHBqEWnkEDy0AQELPEpjwrFageZxrHDADO6i8ktui1ikhFTW-G98L1qvE2Wei3B_im1_Qx22ccDaFuMkvgn_Zr7yLaXuQ9gaaG-nQSzICS7dfb-1NoLmov7iiXg0liFf5ynAxJFVuMEKUpB6YgIgoUdWpLlTQSAo-qVpYPgbIxrRCol5s-dJQsPfT9G7teaO3sVXzTTTA5Pfo0hCWgDUhfHt213g4kXze2pFoHtqlOknoomfe3qNv4n38Isj4");'></div>
+<div>
+<p class="font-bold text-[#111813] dark:text-white group-hover:text-primary transition-colors">The Johnson Family</p>
+<p class="text-xs text-slate-500">Member since 2022</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                                                -25%
+                                            </span>
+</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-15%</td>
+<td class="px-6 py-4 text-center">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#1f3d2b] transition-colors group">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 flex items-center justify-center font-bold">2</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">4B</div>
+<div>
+<p class="font-bold text-[#111813] dark:text-white group-hover:text-primary transition-colors">Apt 4B</p>
+<p class="text-xs text-slate-500">Anonymous</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                                                -21%
+                                            </span>
+</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-18%</td>
+<td class="px-6 py-4 text-center">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#1f3d2b] transition-colors group">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 flex items-center justify-center font-bold">3</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gray-200 bg-cover bg-center" data-alt="Portrait of two people smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmTLvYnNmWESSkhPofZ_cpzGRDShMDOfWXqtq5wNiMx0547whOJSkV8mq1fnVefiAjMorNXwzTpLqiPbfHCTYn7sdfICJvsDmapUVHgMjQMxqUnMRd4G2ZVorTi91m3E5HhPth28uwyflPr_Q4Kg6DTVmQuv6cniVKp0G7btJ-_J8751H1QjC7hvVNWouU0P0BmF1EBMGVYcSy11eBpg_sj2HDHATaqoSh5I81VzclQzQzK_FsMiQK5hl9oEdjn-wO54U9J1iQHGg");'></div>
+<div>
+<p class="font-bold text-[#111813] dark:text-white group-hover:text-primary transition-colors">The Greens</p>
+<p class="text-xs text-slate-500">Eco-Warriors</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                                                -18%
+                                            </span>
+</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-12%</td>
+<td class="px-6 py-4 text-center">
+<span class="material-symbols-outlined text-slate-400">remove</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#1f3d2b] transition-colors group">
+<td class="px-6 py-4">
+<div class="size-8 flex items-center justify-center font-bold text-slate-400">4</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">12M</div>
+<div>
+<p class="font-bold text-[#111813] dark:text-white group-hover:text-primary transition-colors">Neighbor at 12 Maple St</p>
+<p class="text-xs text-slate-500">Anonymous</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-15%</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-10%</td>
+<td class="px-6 py-4 text-center">
+<span class="material-symbols-outlined text-red-500">trending_down</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#1f3d2b] transition-colors group">
+<td class="px-6 py-4">
+<div class="size-8 flex items-center justify-center font-bold text-slate-400">5</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">H</div>
+<div>
+<p class="font-bold text-[#111813] dark:text-white group-hover:text-primary transition-colors">Henderson House</p>
+<p class="text-xs text-slate-500">New Joiner</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-12%</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300 font-medium">-8%</td>
+<td class="px-6 py-4 text-center">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-[#f8f9fa] dark:bg-[#152a1d] border-t border-[#e5e7eb] dark:border-[#2a4a35] flex justify-center">
+<button class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors flex items-center gap-1">
+                                View Full Leaderboard <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Right Column (Sidebar) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Top Saver Spotlight -->
+<div class="bg-white dark:bg-[#1a3324] rounded-xl p-0 shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35] overflow-hidden group">
+<div class="relative h-32 bg-cover bg-center" data-alt="Abstract green energetic gradient background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1XVlNyTLw087o57BRdrMXHQLU9Zv-UlQ9QSxPfmZ5EpLr4-d-v3iC2I5DdaxO2FfsS0wKw89YF98tdTxC271_T3g2i4aIEVuSDlMrUumhiHSNZaQ3KABaqAWXGz_T-rkloh8hmHek9A-YcUbgW_9D7Gzr9KjkpdEpVqUusXwi5DgQhTY43Paeoq4vrrWFUlRrQzMhffj1T25K5Ely7tqptDqcPVPUvRlQs053umL6Hr-fU_Hj2dyFzzVfN5nKPi9bcmzDhBaWtKc");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<span class="bg-primary text-[#102216] text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide mb-1 inline-block">Current Leader</span>
+<h3 class="text-xl font-bold">#1 Top Saver</h3>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-14 rounded-full border-4 border-white dark:border-[#1a3324] -mt-12 bg-gray-200 bg-cover bg-center shadow-md z-10" data-alt="Portrait of happy family outdoors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_8UtRdY2lF5_iw25Z6aGYRt-2UvMotnnR4uo9C73g8HhH23nQDJK32kXP9Wm3PZkWi2pRj3UeIUuBrdfUV0OC9vpsS9DTCQaieUGAImhlzvqe-xUw_P7k55q8tPPhxRMKd-5p5KH5WDsuneTOYMSWzS_cFByCyZxrXKhYIC7J76XPs011ziMpubmV4buYslr9smCGUE4QYCf3LzZ2L7PvoyhLC2TSGZ9syedisFS8lDZC4NYnjBW8i7F0PS24VuV6Dgq7VsyU4XA");'></div>
+<div class="-mt-2">
+<p class="font-bold text-lg">The Johnson Family</p>
+<div class="flex items-center gap-1 text-primary text-sm font-medium">
+<span class="material-symbols-outlined text-lg">workspace_premium</span>
+                                        Gold Tier
+                                    </div>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm mb-4">Reduced consumption by 25% this week! Keep up the great work.</p>
+<div class="w-full h-px bg-slate-100 dark:bg-slate-700 mb-4"></div>
+<button class="w-full py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#102216] font-medium transition-all text-sm">Send Kudos</button>
+</div>
+</div>
+<!-- Resource Consumption Charts -->
+<div class="bg-white dark:bg-[#1a3324] rounded-xl p-6 shadow-sm border border-[#e5e7eb] dark:border-[#2a4a35]">
+<h4 class="font-bold text-base mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">bar_chart</span>
+                            Consumption Trend
+                        </h4>
+<!-- Electricity Chart -->
+<div class="mb-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold uppercase text-slate-500">Electricity</span>
+<span class="text-xs font-bold text-primary">-12% avg</span>
+</div>
+<div class="flex items-end justify-between h-16 gap-1">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[60%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[80%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[50%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[70%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[40%]"></div>
+<div class="w-full bg-primary/80 rounded-sm h-[30%]"></div>
+</div>
+</div>
+<!-- Water Chart -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold uppercase text-slate-500">Water</span>
+<span class="text-xs font-bold text-blue-400">-5% avg</span>
+</div>
+<div class="flex items-end justify-between h-16 gap-1">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[50%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[45%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[60%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[55%]"></div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-sm h-[40%]"></div>
+<div class="w-full bg-blue-400/80 rounded-sm h-[35%]"></div>
+</div>
+</div>
+</div>
+<!-- Daily Tip -->
+<div class="bg-[#1f3d2b] rounded-xl p-6 text-white relative overflow-hidden">
+<span class="material-symbols-outlined absolute top-4 right-4 text-white/10 text-6xl">lightbulb</span>
+<div class="relative z-10">
+<h4 class="font-bold mb-2 text-primary">Did you know?</h4>
+<p class="text-sm leading-relaxed text-white/90">Reducing shower time by just 2 minutes saves up to 5 gallons of water per shower.</p>
+<a class="inline-block mt-4 text-xs font-bold text-white underline decoration-primary decoration-2 underline-offset-4 hover:text-primary transition-colors" href="#">More Tips</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
