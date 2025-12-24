@@ -8,7 +8,7 @@ export default function ResidentRegistrationPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/resident');
+        // Submit Logic
     };
 
     return (

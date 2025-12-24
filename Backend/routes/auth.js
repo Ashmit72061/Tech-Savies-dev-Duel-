@@ -26,7 +26,18 @@ router.post('/createuser', async (req, res) => {
 
         const data = { user: { id: user.id } };
         const authtoken = jwt.sign(data, JWT_SECRET);
-        res.json({ authtoken });
+        res.json({ authtoken, id: user.id });
+        res.render('/resident');
+    } catch (error) {
+        res.status(500).send("Server Error");
+    }
+});
+
+// GET: /api/auth/resident
+router.get('/resident', async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id);
+        res.json(user);
     } catch (error) {
         res.status(500).send("Server Error");
     }
