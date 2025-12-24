@@ -6,10 +6,29 @@ import Icon from '../components/atoms/Icon';
 export default function ResidentRegistrationPage() {
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         // Submit Logic
-    };
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+        console.log(data);
+
+        try {
+            const response = await fetch(import.meta.env.VITE_API_URL + '/api/auth/createuser', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+            const resData = await response.json();
+            console.log(resData);
+            console.log("Sucessully Created");
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 
     return (
         <div className="flex min-h-screen bg-background-light dark:bg-background-dark">
@@ -52,7 +71,10 @@ export default function ResidentRegistrationPage() {
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <Icon name="location_city" size={20} className="text-gray-400" />
                                 </div>
-                                <select className="block w-full rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 text-gray-900 dark:text-white pl-10 pr-10 py-3 focus:ring-2 focus:ring-primary focus:border-primary">
+                                <select
+                                    name="society"
+                                    className="block w-full rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 text-gray-900 dark:text-white pl-10 pr-10 py-3 focus:ring-2 focus:ring-primary focus:border-primary"
+                                >
                                     <option>Select your society</option>
                                     <option>Green Valley Estate</option>
                                     <option>Eco Heights</option>
@@ -182,3 +204,4 @@ export default function ResidentRegistrationPage() {
         </div>
     );
 }
+

@@ -19,15 +19,17 @@ router.post('/createuser', async (req, res) => {
         const secPassword = await bcrypt.hash(req.body.password, salt);
 
         user = await User.create({
-            username: req.body.username,
-            password: secPassword,
+            name: req.body.name,
+            username: req.body.email.split('@')[0], // auto-generate from email
             email: req.body.email,
+            password: secPassword,
+            flat: req.body.flat,
+            society: req.body.society
         });
 
         const data = { user: { id: user.id } };
         const authtoken = jwt.sign(data, JWT_SECRET);
         res.json({ authtoken, id: user.id });
-        res.render('/resident');
     } catch (error) {
         res.status(500).send("Server Error");
     }

@@ -18,6 +18,8 @@ import SettingsPage from './pages/SettingsPage';
 import InputDataPage from './pages/InputDataPage';
 import ContactUsPage from './pages/ContactUsPage';
 
+import TestPage from './pages/TestPage';
+
 // Placeholder for missing pages
 const Placeholder = ({ title }) => (
   <div className="flex flex-col items-center justify-center p-20 text-center">
@@ -75,6 +77,9 @@ function App() {
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
+
+          {/* Test Page */}
+          <Route path="/test" element={<TestPage />} />
 
         </Routes>
       </div>
