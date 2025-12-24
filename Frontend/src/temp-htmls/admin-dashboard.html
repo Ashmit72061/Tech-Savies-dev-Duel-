@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainability Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2e20",
+                        "text-main": "#0d1b10",
+                        "text-secondary": "#4c9a59",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white">
+<div class="flex h-screen w-full overflow-hidden">
+<aside class="w-64 flex flex-col justify-between border-r border-[#e7f3e9] dark:border-[#2a4530] bg-surface-light dark:bg-surface-dark h-full flex-shrink-0 transition-colors duration-200">
+<div class="flex flex-col gap-4 p-4">
+<div class="flex gap-3 items-center mb-6 px-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 flex-shrink-0 bg-primary/20" data-alt="Abstract green eco logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAz9dV_qEwyDwGWD4Jo-RlkihOdbTf8MzDQpfBTvtzEvw-EOvZEHiGIjO-yCVRM3ShCNkUDi0cCPMbt2q56RAjoquK_p1phokmRH-PCRNGhN7u3GfVzYtZBSsK-OtF8ModQL_h_2cUrtcZU-eu0j7o22vPAWutyVpStosHtS5aT4qa7NlUUPgJYFIOpm3NbDpB4h8h6JqadCwNzMkfqlC3nfbOFk33sBHI0HJOiDBe9gPGbCJDmGW3HMAcWqcBjcEBporgBWBud_O0");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-main dark:text-white text-base font-bold leading-normal">EcoAdmin</h1>
+<p class="text-text-secondary dark:text-primary/80 text-xs font-normal leading-normal">Super Admin</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-text-main dark:text-white group mb-2" href="#">
+<span class="material-symbols-outlined text-text-main dark:text-white">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<div class="px-3 py-2 mt-2">
+<span class="text-xs font-bold text-text-secondary uppercase tracking-wider">Society Setup</span>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-text-main dark:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">domain_add</span>
+<span class="text-sm font-medium">Create Society</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-text-main dark:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">add_home_work</span>
+<span class="text-sm font-medium">Add Flats</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-text-main dark:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">display_settings</span>
+<span class="text-sm font-medium">Set Flat Metadata</span>
+</a>
+<div class="px-3 py-2 mt-2">
+<span class="text-xs font-bold text-text-secondary uppercase tracking-wider">Operations</span>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-text-main dark:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">fact_check</span>
+<span class="text-sm font-medium">Enter/Approve Data</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-text-main dark:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">lock_clock</span>
+<span class="text-sm font-medium">Lock Cycle</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-text-main dark:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">summarize</span>
+<span class="text-sm font-medium">Generate Reports</span>
+</a>
+</nav>
+</div>
+<div class="p-4 border-t border-[#e7f3e9] dark:border-[#2a4530]">
+<button class="flex w-full cursor-pointer items-center gap-2 justify-center rounded-lg h-10 px-4 bg-transparent border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 text-text-main dark:text-white text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="truncate">Settings</span>
+</button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-[#e7f3e9] dark:border-[#2a4530] bg-surface-light dark:bg-surface-dark px-8 py-3 flex-shrink-0 z-10">
+<div class="flex items-center gap-4 text-text-main dark:text-white">
+<h2 class="text-lg font-bold leading-tight tracking-tight">Admin Dashboard &gt; Overview</h2>
+</div>
+<div class="flex items-center gap-4 lg:gap-8">
+<label class="hidden md:flex flex-col min-w-40 h-10 w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg bg-[#e7f3e9] dark:bg-[#2a4530] overflow-hidden focus-within:ring-2 ring-primary/50 transition-shadow">
+<div class="text-text-secondary dark:text-gray-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-text-main dark:text-white placeholder:text-text-secondary dark:placeholder:text-gray-400 px-3 text-sm focus:ring-0" placeholder="Search societies..."/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-[#e7f3e9] dark:hover:bg-[#2a4530] text-text-main dark:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary/20 cursor-pointer" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChcSZAyI3nj4tZQ6wy3WugH0lueWXo7U3yCB0o6q0fSSnRaDVU6lcVFiHyRoW-Fdj2U1961rQpTPqHKAX0lv9ASs-XFEHfVSbLTknYuVpetghZen6u5vH_bjbiyv1uLj_31_Thmx-3enoNa5S_Jl9g9qd9rNLf3iShjTbWUWvmXKzC7IHIYVoNLYug3akcOuSO0ltmaY710pa1ArvpeBbDfPBD35p-5OxKFsnAzXhe9Wc1foLF9gQlwKcCVAFifsE_isth8qD1tg4");'></div>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 scrollbar-hide">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-8">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-text-main dark:text-white text-3xl font-bold">Welcome back, Admin!</h1>
+<p class="text-text-secondary dark:text-gray-400 text-sm max-w-xl">
+                            Here's what's happening with your sustainability initiatives today. You have 12 pending approvals.
+                        </p>
+</div>
+<div class="flex gap-3 flex-wrap">
+<button class="flex items-center gap-2 h-10 px-4 bg-primary hover:bg-[#0fd630] text-text-main text-sm font-bold rounded-lg shadow-sm shadow-primary/30 transition-all hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[20px]">add_business</span>
+<span>New Society</span>
+</button>
+<button class="flex items-center gap-2 h-10 px-4 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary text-text-main dark:text-white text-sm font-bold rounded-lg transition-all hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[20px]">add_home_work</span>
+<span>Add Flat</span>
+</button>
+<button class="flex items-center gap-2 h-10 px-4 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary text-text-main dark:text-white text-sm font-bold rounded-lg transition-all hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[20px]">lock_clock</span>
+<span>Lock Cycle</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1 p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-[#cfe7d3] dark:border-[#2a4530] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">apartment</span>
+</div>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-medium">Total Societies</p>
+<div class="flex items-end gap-2">
+<p class="text-text-main dark:text-white text-3xl font-bold">12</p>
+<span class="text-[#078825] bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded text-xs font-bold mb-1 flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 2%
+                            </span>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-[#cfe7d3] dark:border-[#2a4530] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-yellow-500">pending_actions</span>
+</div>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-medium">Pending Approvals</p>
+<div class="flex items-end gap-2">
+<p class="text-text-main dark:text-white text-3xl font-bold">45</p>
+<span class="text-yellow-700 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-900/30 px-1.5 py-0.5 rounded text-xs font-bold mb-1 flex items-center">
+                                +5 today
+                            </span>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-[#cfe7d3] dark:border-[#2a4530] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-blue-500">calendar_month</span>
+</div>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-medium">Active Cycle Status</p>
+<div class="flex items-end gap-2">
+<p class="text-text-main dark:text-white text-xl font-bold">Open - Oct 2023</p>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mt-2">
+<div class="bg-primary h-1.5 rounded-full" style="width: 70%"></div>
+</div>
+<p class="text-xs text-text-secondary dark:text-gray-500 mt-1">12 days remaining</p>
+</div>
+<div class="flex flex-col gap-1 p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-[#cfe7d3] dark:border-[#2a4530] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">eco</span>
+</div>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-medium">Avg Sustainability Score</p>
+<div class="flex items-end gap-2">
+<p class="text-text-main dark:text-white text-3xl font-bold">78<span class="text-lg text-gray-400 font-normal">/100</span></p>
+<span class="text-[#078825] bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded text-xs font-bold mb-1 flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 1.5%
+                            </span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<div class="xl:col-span-2 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-text-main dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">apartment</span>
+                                Society Directory
+                            </h3>
+<button class="text-sm text-primary font-bold hover:underline">View All</button>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark border border-[#e7f3e9] dark:border-[#2a4530] rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#e7f3e9]/50 dark:bg-[#2a4530]/50 border-b border-[#e7f3e9] dark:border-[#2a4530]">
+<th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-text-secondary dark:text-gray-400">Society Name</th>
+<th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-text-secondary dark:text-gray-400">Flats</th>
+<th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-text-secondary dark:text-gray-400">Cycle Status</th>
+<th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-text-secondary dark:text-gray-400">Score</th>
+<th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-text-secondary dark:text-gray-400 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#e7f3e9] dark:divide-[#2a4530]">
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs">GR</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-sm">Green Residency</p>
+<p class="text-xs text-text-secondary dark:text-gray-500">Mumbai, IN</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-sm text-text-main dark:text-gray-300">124</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+<span class="size-1.5 rounded-full bg-green-600"></span>
+                                                    Submitting
+                                                </span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-text-main dark:text-white">85</span>
+<div class="w-16 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full">
+<div class="h-1.5 bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-gray-400 hover:text-text-main dark:hover:text-white transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-xs">EP</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-sm">Eco Palms</p>
+<p class="text-xs text-text-secondary dark:text-gray-500">Pune, IN</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-sm text-text-main dark:text-gray-300">86</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">
+<span class="size-1.5 rounded-full bg-yellow-600"></span>
+                                                    Audit Pending
+                                                </span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-text-main dark:text-white">72</span>
+<div class="w-16 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full">
+<div class="h-1.5 bg-yellow-500 rounded-full" style="width: 72%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-gray-400 hover:text-text-main dark:hover:text-white transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400 font-bold text-xs">SV</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-sm">Solar Valley</p>
+<p class="text-xs text-text-secondary dark:text-gray-500">Bangalore, IN</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-sm text-text-main dark:text-gray-300">210</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+<span class="size-1.5 rounded-full bg-green-600"></span>
+                                                    Submitting
+                                                </span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-text-main dark:text-white">91</span>
+<div class="w-16 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full">
+<div class="h-1.5 bg-primary rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-gray-400 hover:text-text-main dark:hover:text-white transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-[#e7f3e9] dark:border-[#2a4530] bg-[#fcfdfc] dark:bg-[#1c2e20]/50 flex justify-center">
+<button class="text-xs font-bold text-text-secondary dark:text-gray-400 hover:text-primary transition-colors flex items-center gap-1">
+                                    Show More <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-text-main dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500">notifications_active</span>
+                                Needs Review
+                            </h3>
+<div class="bg-surface-light dark:bg-surface-dark border border-[#e7f3e9] dark:border-[#2a4530] rounded-xl shadow-sm p-4 flex flex-col gap-3">
+<div class="flex items-start gap-3 p-3 rounded-lg bg-[#f8fcf9] dark:bg-white/5 border border-transparent hover:border-gray-200 dark:hover:border-gray-600 transition-colors group">
+<div class="bg-blue-100 dark:bg-blue-900/40 p-2 rounded text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-text-main dark:text-white truncate">Electricity Usage</p>
+<span class="text-[10px] text-text-secondary dark:text-gray-500">2m ago</span>
+</div>
+<p class="text-xs text-text-secondary dark:text-gray-400 truncate">Flat 4B • Green Residency</p>
+<p class="text-xs font-medium text-text-main dark:text-gray-300 mt-1">Value: 340 kWh</p>
+</div>
+<div class="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="size-7 rounded bg-primary/20 hover:bg-primary text-primary hover:text-black flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="size-7 rounded bg-red-100 hover:bg-red-500 text-red-600 hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-lg bg-[#f8fcf9] dark:bg-white/5 border border-transparent hover:border-gray-200 dark:hover:border-gray-600 transition-colors group">
+<div class="bg-cyan-100 dark:bg-cyan-900/40 p-2 rounded text-cyan-600 dark:text-cyan-400">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-text-main dark:text-white truncate">Water Consumption</p>
+<span class="text-[10px] text-text-secondary dark:text-gray-500">15m ago</span>
+</div>
+<p class="text-xs text-text-secondary dark:text-gray-400 truncate">Flat 12A • Eco Palms</p>
+<p class="text-xs font-medium text-text-main dark:text-gray-300 mt-1">Value: 12.5 kL</p>
+</div>
+<div class="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="size-7 rounded bg-primary/20 hover:bg-primary text-primary hover:text-black flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="size-7 rounded bg-red-100 hover:bg-red-500 text-red-600 hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-lg bg-[#f8fcf9] dark:bg-white/5 border border-transparent hover:border-gray-200 dark:hover:border-gray-600 transition-colors group">
+<div class="bg-orange-100 dark:bg-orange-900/40 p-2 rounded text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-[20px]">recycling</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-text-main dark:text-white truncate">Waste Separation</p>
+<span class="text-[10px] text-text-secondary dark:text-gray-500">1h ago</span>
+</div>
+<p class="text-xs text-text-secondary dark:text-gray-400 truncate">Flat 302 • Solar Valley</p>
+<p class="text-xs font-medium text-text-main dark:text-gray-300 mt-1">Status: Verified</p>
+</div>
+<div class="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="size-7 rounded bg-primary/20 hover:bg-primary text-primary hover:text-black flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="size-7 rounded bg-red-100 hover:bg-red-500 text-red-600 hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-2 py-2 text-xs font-bold text-primary hover:bg-primary/10 rounded transition-colors">
+                                    View All Pending (45)
+                                </button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-text-main dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-purple-500">insights</span>
+                                Quick Reports
+                            </h3>
+<div class="bg-surface-light dark:bg-surface-dark border border-[#e7f3e9] dark:border-[#2a4530] rounded-xl shadow-sm p-5 flex flex-col gap-4">
+<p class="text-sm text-text-secondary dark:text-gray-400">Generate monthly performance reports.</p>
+<div class="flex flex-col gap-3">
+<label class="flex flex-col gap-1.5">
+<span class="text-xs font-bold text-text-main dark:text-gray-300">Select Month</span>
+<select class="form-select w-full rounded-lg border-gray-200 dark:border-gray-700 bg-transparent text-sm focus:border-primary focus:ring-primary">
+<option>October 2023</option>
+<option>September 2023</option>
+<option>August 2023</option>
+</select>
+</label>
+<button class="w-full bg-black dark:bg-white text-white dark:text-black font-bold h-9 rounded-lg text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                                        Download PDF
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-12 mb-6 text-center text-xs text-text-secondary dark:text-gray-500">
+<p>© 2023 Sustainability Scoring System. All rights reserved.</p>
+</footer>
+</div>
+</main>
+</div>
+
+</body></html>

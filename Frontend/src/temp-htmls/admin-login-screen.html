@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainability Admin Portal - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden font-display transition-colors duration-200">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f3e9] dark:border-[#1e3a24] px-6 py-4 md:px-10 lg:px-40 bg-white/50 dark:bg-[#102213]/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0d1b10] dark:text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#0d1b10] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Sustainability Admin Portal</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0d1b10] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#0d1b10] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Member Login</a>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex items-center justify-center p-4 md:p-10">
+<div class="bg-white dark:bg-[#152a18] shadow-2xl rounded-2xl flex flex-col md:flex-row w-full max-w-[1000px] overflow-hidden min-h-[600px] border border-[#e7f3e9] dark:border-[#1e3a24]">
+<!-- Left Side: Visual / Hero -->
+<div class="hidden md:flex md:w-1/2 bg-cover bg-center relative flex-col justify-end p-10" data-alt="Abstract green leaves and nature patterns showing sustainability" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDm4OSucrBt8mVMVEP1VcEiDttEwFFtw_hqlDqndekeA3oIiEqEUvBE5xS0kalF5HUcDEYCi0YWG3rhziintvMoPpgvYaCYouFB2S9V8ZgRsOOHXyI5qNQgiNIwGqvQobsixCT0wBY_uxX7R_SJIa_c2PCgiCAAjNwyxq3vJrWzxHGhhyEJ80Ml4rRmGkHZaHua3q2sk_GTZuRTdTHM278zQgdUjRGcenNU0BRVxhuI4aUfWg3JgAir9UgVr6_PxE-XeZqMPeNk72E");'>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0d1b10]/90 to-[#0d1b10]/20"></div>
+<div class="relative z-10 text-white">
+<div class="mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">eco</span>
+</div>
+<h1 class="text-3xl font-bold mb-2 leading-tight">Driving Community Change</h1>
+<p class="text-gray-200 text-sm leading-relaxed opacity-90">
+                            Monitor, analyze, and improve sustainability scores across households. Your administration drives the green initiative forward.
+                        </p>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-[#152a18]">
+<div class="flex flex-col gap-2 mb-8">
+<h1 class="text-[#0d1b10] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">
+                            Welcome back, Admin
+                        </h1>
+<h2 class="text-[#4c9a59] dark:text-[#6ccf7d] text-sm font-normal leading-normal">
+                            Please sign in to access the sustainability dashboard.
+                        </h2>
+</div>
+<form class="flex flex-col gap-5">
+<!-- Email Field -->
+<div class="flex flex-col gap-1">
+<label class="text-[#0d1b10] dark:text-gray-200 text-sm font-medium leading-normal">Email or Username</label>
+<div class="flex w-full items-center rounded-lg border border-[#cfe7d3] dark:border-[#2d4a32] bg-[#f8fcf9] dark:bg-[#1a2e1e] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all overflow-hidden h-12">
+<div class="pl-4 flex items-center justify-center text-[#4c9a59]">
+<span class="material-symbols-outlined">person</span>
+</div>
+<input class="flex-1 bg-transparent border-none text-[#0d1b10] dark:text-white placeholder:text-[#4c9a59]/60 focus:ring-0 px-3 text-base h-full w-full" placeholder="Enter your email or username" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1">
+<label class="text-[#0d1b10] dark:text-gray-200 text-sm font-medium leading-normal">Password</label>
+<div class="flex w-full items-center rounded-lg border border-[#cfe7d3] dark:border-[#2d4a32] bg-[#f8fcf9] dark:bg-[#1a2e1e] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all overflow-hidden h-12">
+<div class="pl-4 flex items-center justify-center text-[#4c9a59]">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<input class="flex-1 bg-transparent border-none text-[#0d1b10] dark:text-white placeholder:text-[#4c9a59]/60 focus:ring-0 px-3 text-base h-full w-full" placeholder="Enter your password" type="password"/>
+<button class="pr-4 flex items-center justify-center text-[#4c9a59] hover:text-primary cursor-pointer" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Additional Actions -->
+<div class="flex items-center justify-between mt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-gray-300 text-primary focus:ring-primary/50 w-4 h-4" type="checkbox"/>
+<span class="text-sm text-[#0d1b10] dark:text-gray-300">Remember me</span>
+</label>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Forgot Password?</a>
+</div>
+<!-- Login Button -->
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-primary/90 transition-colors text-[#0d1b10] text-base font-bold leading-normal tracking-[0.015em] mt-2 shadow-md hover:shadow-lg">
+<span class="truncate">Secure Login</span>
+</button>
+</form>
+<div class="mt-8 text-center">
+<p class="text-sm text-gray-500 dark:text-gray-400">
+                            Not an admin? <a class="text-primary font-bold hover:underline" href="#">Go to Member Login</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col gap-6 px-5 py-6 text-center border-t border-[#e7f3e9] dark:border-[#1e3a24] bg-white/50 dark:bg-[#102213]/50">
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-[#4c9a59] text-sm font-normal leading-normal hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#4c9a59] text-sm font-normal leading-normal hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-[#4c9a59] text-sm font-normal leading-normal hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<p class="text-[#4c9a59]/60 text-xs font-normal leading-normal">© 2023 Community Sustainability System. All rights reserved.</p>
+</footer>
+</div>
+</body></html>
