@@ -8,7 +8,7 @@ import Badge from '../components/atoms/Badge';
 export default function InputDataPage() {
     const [wasteSegregation, setWasteSegregation] = useState('yes');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const data = {
@@ -19,8 +19,22 @@ export default function InputDataPage() {
             water: formData.get('water'),
             wasteSegregation: formData.get('waste_segregation'),
         };
-        console.log('Form submitted:', data);
-        // Add your form submission logic here
+
+        try {
+            const response = await fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', // Tell backend we are sending JSON
+                },
+                body: JSON.stringify(formData), // Convert JS object to JSON string
+            });
+
+            const result = await response.json();
+            console.log("Success:", result);
+
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     const handleReset = (e) => {
