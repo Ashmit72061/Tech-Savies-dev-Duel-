@@ -40,5 +40,3 @@ Password
 IN ADMIN DASHBOARD---
 
 The Frontent will fetch data from the main DATABASE By Segregating the Societies By Segregating the Societies the frontend will convert that in whole Society list like in user DASHBOARD
-
-
