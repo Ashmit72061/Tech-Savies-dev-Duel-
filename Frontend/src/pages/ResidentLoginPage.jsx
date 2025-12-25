@@ -1,14 +1,31 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../components/atoms/Input';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function ResidentLoginPage() {
     const navigate = useNavigate();
+    const { login } = useAuth();
+    const [email, setEmail] = useState('resident@demo.com');
+    const [password, setPassword] = useState('password');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        navigate('/resident');
+        setError('');
+        setLoading(true);
+
+        const result = await login(email, password, 'resident');
+
+        setLoading(false);
+        if (result.success) {
+            navigate('/resident');
+        } else {
+            setError(result.error || 'Login failed');
+        }
     };
 
     return (
@@ -64,6 +81,12 @@ export default function ResidentLoginPage() {
                         <p className="mt-2 text-gray-600 dark:text-gray-400">Please enter your details to sign in.</p>
                     </div>
 
+                    {error && (
+                        <div className="bg-red-100 dark:bg-red-900/30 border border-red-400 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg">
+                            {error}
+                        </div>
+                    )}
+
                     <form onSubmit={handleSubmit} className="mt-8 space-y-6">
                         <Input
                             label="Email or Username"
@@ -71,7 +94,8 @@ export default function ResidentLoginPage() {
                             name="email"
                             placeholder="resident@example.com"
                             icon="mail"
-                            defaultValue="resident@demo.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                         />
 
@@ -87,7 +111,8 @@ export default function ResidentLoginPage() {
                                 name="password"
                                 placeholder="••••••••"
                                 icon="lock"
-                                defaultValue="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
                         </div>
@@ -100,8 +125,8 @@ export default function ResidentLoginPage() {
                             <label className="ml-2 block text-sm dark:text-gray-300">Keep me logged in</label>
                         </div>
 
-                        <Button type="submit" size="lg" className="w-full">
-                            Log In
+                        <Button type="submit" size="lg" className="w-full" disabled={loading}>
+                            {loading ? 'Signing in...' : 'Log In'}
                         </Button>
                     </form>
 

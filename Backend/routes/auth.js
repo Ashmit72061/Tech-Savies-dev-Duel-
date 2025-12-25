@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
 
         const data = { user: { id: user.id } };
         const authtoken = jwt.sign(data, JWT_SECRET);
-        res.json({ authtoken });
+        res.json({ authtoken, id: user.id });
     } catch (error) {
         res.status(500).send("Server Error");
     }
@@ -100,7 +100,7 @@ router.post('/admin/login', async (req, res) => {
 
         const data = { admin: { id: admin.id } };
         const authtoken = jwt.sign(data, JWT_SECRET);
-        res.json({ authtoken });
+        res.json({ authtoken, id: admin.id });
     } catch (error) {
         res.status(500).send("Server Error");
     }

@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+
 import LandingPage from './pages/LandingPage';
 import AdminLoginPage from './pages/LoginPage';
 import ResidentLoginPage from './pages/ResidentLoginPage';
@@ -35,55 +38,65 @@ const Placeholder = ({ title }) => (
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display">
-        <Routes>
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display">
+          <Routes>
 
-          {/* Public Route */}
-          <Route path="/" element={<LandingPage />} />
+            {/* Public Routes */}
+            <Route path="/" element={<LandingPage />} />
 
-          {/* Admin Auth Routes */}
-          <Route path="/admin/login" element={<AdminLoginPage />} />
-          <Route path="/admin/register" element={<AdminRegistrationPage />} />
+            {/* Admin Auth Routes */}
+            <Route path="/admin/login" element={<AdminLoginPage />} />
+            <Route path="/admin/register" element={<AdminRegistrationPage />} />
 
-          {/* Resident Auth Routes */}
-          <Route path="/resident/login" element={<ResidentLoginPage />} />
-          <Route path="/resident/register" element={<ResidentRegistrationPage />} />
+            {/* Resident Auth Routes */}
+            <Route path="/resident/login" element={<ResidentLoginPage />} />
+            <Route path="/resident/register" element={<ResidentRegistrationPage />} />
 
-          {/* Legacy Redirects */}
-          <Route path="/login" element={<Navigate to="/resident/login" replace />} />
-          <Route path="/register" element={<Navigate to="/resident/register" replace />} />
+            {/* Legacy Redirects */}
+            <Route path="/login" element={<Navigate to="/resident/login" replace />} />
+            <Route path="/register" element={<Navigate to="/resident/register" replace />} />
 
-          {/* ================= RESIDENT ROUTES ================= */}
-          <Route path="/resident" element={<DashboardLayout role="resident" />}>
-            <Route index element={<ResidentDashboard />} />
-            <Route path="impact" element={<SocietyImpactPage />} />
-            <Route path="goals" element={<CommunityGoalsPage />} />
-            <Route path="input" element={<InputDataPage />} />
-            <Route path="settings" element={<SettingsPage />} />
-            <Route path="contact" element={<ContactUsPage />} />
-          </Route>
+            {/* ================= PROTECTED RESIDENT ROUTES ================= */}
+            <Route path="/resident" element={
+              <ProtectedRoute requiredRole="resident">
+                <DashboardLayout role="resident" />
+              </ProtectedRoute>
+            }>
+              <Route index element={<ResidentDashboard />} />
+              <Route path="impact" element={<SocietyImpactPage />} />
+              <Route path="goals" element={<CommunityGoalsPage />} />
+              <Route path="input" element={<InputDataPage />} />
+              <Route path="settings" element={<SettingsPage />} />
+              <Route path="contact" element={<ContactUsPage />} />
+            </Route>
 
-          {/* ================= ADMIN ROUTES ================= */}
-          <Route path="/admin" element={<DashboardLayout role="admin" />}>
-            <Route index element={<AdminDashboard />} />
-            <Route path="societies" element={<Placeholder title="Manage Societies" />} />
-            <Route path="societies/new" element={<CreateSocietyPage />} />
-            <Route path="residents" element={<Placeholder title="Resident Directory" />} />
-            <Route path="approvals" element={<Placeholder title="Pending Approvals" />} />
-            <Route path="input" element={<InputDataPage />} />
-            <Route path="settings" element={<SettingsPage />} />
-          </Route>
+            {/* ================= PROTECTED ADMIN ROUTES ================= */}
+            <Route path="/admin" element={
+              <ProtectedRoute requiredRole="admin">
+                <DashboardLayout role="admin" />
+              </ProtectedRoute>
+            }>
+              <Route index element={<AdminDashboard />} />
+              <Route path="societies" element={<Placeholder title="Manage Societies" />} />
+              <Route path="societies/new" element={<CreateSocietyPage />} />
+              <Route path="residents" element={<Placeholder title="Resident Directory" />} />
+              <Route path="approvals" element={<Placeholder title="Pending Approvals" />} />
+              <Route path="input" element={<InputDataPage />} />
+              <Route path="settings" element={<SettingsPage />} />
+            </Route>
 
-          {/* Fallback */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Test Page */}
+            <Route path="/test" element={<TestPage />} />
 
-          {/* Test Page */}
-          <Route path="/test" element={<TestPage />} />
+            {/* Fallback */}
+            <Route path="*" element={<Navigate to="/" replace />} />
 
-        </Routes>
-      </div>
-    </BrowserRouter>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

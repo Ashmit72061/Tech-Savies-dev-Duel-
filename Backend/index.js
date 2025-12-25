@@ -22,6 +22,10 @@ mongoose.connect(process.env.MONGO_URI)
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/resident', require('./routes/resident'));
+app.use('/api/user', require('./routes/user'));
+app.use('/api/consumption', require('./routes/consumption'));
+app.use('/api/goals', require('./routes/goals'));
+app.use('/api/points', require('./routes/points'));
 app.use('/api/test', require('./routes/test'));
 
 app.listen(port, () => {

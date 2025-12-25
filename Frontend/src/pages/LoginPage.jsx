@@ -1,14 +1,31 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../components/atoms/Input';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function AdminLoginPage() {
     const navigate = useNavigate();
+    const { login } = useAuth();
+    const [email, setEmail] = useState('admin@demo.com');
+    const [password, setPassword] = useState('password');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        navigate('/admin');
+        setError('');
+        setLoading(true);
+
+        const result = await login(email, password, 'admin');
+
+        setLoading(false);
+        if (result.success) {
+            navigate('/admin');
+        } else {
+            setError(result.error || 'Login failed');
+        }
     };
 
     return (
@@ -39,6 +56,12 @@ export default function AdminLoginPage() {
                         <p className="text-gray-500 mt-2">Sign in to manage your communities</p>
                     </div>
 
+                    {error && (
+                        <div className="bg-red-100 dark:bg-red-900/30 border border-red-400 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg">
+                            {error}
+                        </div>
+                    )}
+
                     <form onSubmit={handleLogin} className="space-y-6">
                         <Input
                             label="Email Address"
@@ -46,7 +69,8 @@ export default function AdminLoginPage() {
                             type="email"
                             placeholder="Enter your email"
                             icon="person"
-                            defaultValue="admin@demo.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
 
                         <Input
@@ -54,7 +78,8 @@ export default function AdminLoginPage() {
                             type="password"
                             placeholder="Enter your password"
                             icon="lock"
-                            defaultValue="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
 
                         <div className="flex items-center justify-between text-sm">
@@ -65,7 +90,9 @@ export default function AdminLoginPage() {
                             <a href="#" className="text-primary font-bold hover:underline">Forgot password?</a>
                         </div>
 
-                        <Button type="submit" size="lg" className="w-full">Secure Login</Button>
+                        <Button type="submit" size="lg" className="w-full" disabled={loading}>
+                            {loading ? 'Signing in...' : 'Secure Login'}
+                        </Button>
                     </form>
 
                     <div className="text-center text-sm text-gray-500">
