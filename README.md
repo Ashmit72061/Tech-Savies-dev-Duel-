@@ -150,20 +150,6 @@ This leads to excessive waste, higher costs, and a degrading local ecological zo
 │   │   │   ├── goalsService.js  
 │   │   │   ├── pointsService.js  
 │   │   │   └── userService.js  
-│   │   ├── temp-htmls/  
-│   │   │   ├── admin-create-new-society.html  
-│   │   │   ├── admin-dashboard.html  
-│   │   │   ├── admin-input-data.html  
-│   │   │   ├── admin-login-screen.html  
-│   │   │   ├── admin-registration.html  
-│   │   │   ├── admin-society-view.html  
-│   │   │   ├── community-goals.html  
-│   │   │   ├── landing.html  
-│   │   │   ├── resident-dashboard.html  
-│   │   │   ├── resident-login.html  
-│   │   │   ├── resident-registration.html  
-│   │   │   ├── society-environment-impact-dashboard.html  
-│   │   │   └── user-profile-setting.html  
 │   │   ├── App.jsx  
 │   │   ├── index.css  
 │   │   └── main.jsx  
