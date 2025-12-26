@@ -120,6 +120,6 @@ Tech-Savies-dev-Duel-/
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;### cd ../Frontend  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;### npm install  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;### npm start  
-##Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)  
+## Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)  
 # 👨‍💻 Contributors  
 ## Team Tech-Savies - Building a Greener Future, One Flat at a Time.  
