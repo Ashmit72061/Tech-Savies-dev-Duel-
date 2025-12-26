@@ -78,23 +78,23 @@ This application is built for **efficiency**, **scalability**, and **speed**, en
 The codebase is organized into two main directories for separation of concerns, making it easy for judges and developers to navigate.
 
 Tech-Savies-dev-Duel-/
-├── 📂 Backend/                 # The brain of the application  
-│   ├── 📂 models/              # Mongoose schemas (User, Flat, UsageLogs)  
-│   ├── 📂 routes/              # API endpoints (Auth, OCR, Scoring)  
-│   ├── 📂 controllers/         # Logic for calculating scores and processing images  
-│   ├── 📂 middleware/          # Auth verification and file upload handling  
-│   └── server.js               # Entry point for the Node.js server  
+├── 📂 Backend/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# The brain of the application  
+│   ├── 📂 models/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Mongoose schemas (User, Flat, UsageLogs)  
+│   ├── 📂 routes/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# API endpoints (Auth, OCR, Scoring)  
+│   ├── 📂 controllers/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Logic for calculating scores and processing images  
+│   ├── 📂 middleware/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Auth verification and file upload handling  
+│   └── server.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Entry point for the Node.js server  
 │  
-├── 📂 Frontend/                # The mobile application interface  
-│   ├── 📂 assets/              # Images, fonts, and icons  
+├── 📂 Frontend/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# The mobile application interface  
+│   ├── 📂 assets/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Images, fonts, and icons  
 │   ├── 📂 src/  
-│   │   ├── 📂 components/      # Reusable UI elements (ScoreCard, CameraView)  
-│   │   ├── 📂 screens/         # Main app screens (Dashboard, Leaderboard, Scan)  
-│   │   ├── 📂 services/        # API calls to the backend  
-│   │   └── App.js              # Main React Native entry component  
+│   │   ├── 📂 components/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Reusable UI elements (ScoreCard, CameraView)  
+│   │   ├── 📂 screens/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main app screens (Dashboard, Leaderboard, Scan)  
+│   │   ├── 📂 services/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# API calls to the backend  
+│   │   └── App.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main React Native entry component  
 │   ├── package.json  
 │  
-└── README.md                   # Project Documentation  
+└── README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Project Documentation  
 
 # 🚀 Getting Started
 # To run this project locally for evaluation:
@@ -108,18 +108,18 @@ MongoDB running locally or a cloud URI
 React Native environment set up (CLI or Expo)
 
 1. Clone the Repository
-git clone [https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git](https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git)
-cd Tech-Savies-dev-Duel-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git clone [https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git](https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Tech-Savies-dev-Duel-
 2. Setup Backend
-cd Backend
-npm install
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Backend
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install
 # Create a .env file and add your MONGO_URI and PORT
-node server.js
-Server will start on http://localhost:5000
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node server.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server will start on http://localhost:5000
 3. Setup Frontend
-cd ../Frontend
-npm install
-npm start
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ../Frontend
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm start
 # Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)
 # 👨‍💻 Contributors
 ## Team Tech-Savies - Building a Greener Future, One Flat at a Time.
