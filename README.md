@@ -190,18 +190,18 @@ This leads to excessive waste, higher costs, and a degrading local ecological zo
 ### React Native environment set up (CLI or Expo)  
 
 ### 1. Clone the Repository  
-#### git clone [https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git](https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git)  
-#### cd Tech-Savies-dev-Duel-  
+#### ⟶  git clone [https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git](https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git)  
+#### ⟶ cd Tech-Savies-dev-Duel-  
 ### 2. Setup Backend  
-#### cd Backend  
-#### npm install  
+#### ⟶ cd Backend  
+#### ⟶ npm install  
 ## Create a .env file and add your MONGO_URI and PORT  
-#### node index.js  
-#### Server will start on http://localhost:5000  
+#### ⟶ node index.js  
+#### ⟶ Server will start on http://localhost:5000  
 ### 3. Setup Frontend  
-#### cd ../Frontend  
-#### npm install  
-#### npm start  
+#### ⟶ cd ../Frontend  
+#### ⟶ npm install  
+#### ⟶ npm start  
 ## Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)  
 
 # 🔮 Future Roadmap (Upcoming Updates)
