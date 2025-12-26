@@ -199,8 +199,5 @@ This leads to excessive waste, higher costs, and a degrading local ecological zo
 # 🔌 IoT Integration
 ⟶ Direct integration with smart meters to remove the need for any manual input or scanning.
 
-# 🤖 AI Integration
-⟶ Personalized tips on how to reduce bills based on usage patterns.
-
 # 👨‍💻 Contributors  
 ## Team Tech-Savies - Building a Greener Future, One Flat at a Time.  
