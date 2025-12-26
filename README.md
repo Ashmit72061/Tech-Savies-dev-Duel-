@@ -188,7 +188,6 @@ This leads to excessive waste, higher costs, and a degrading local ecological zo
 #### ⟶ cd ../Frontend  
 #### ⟶ npm install  
 #### ⟶ npm start  
-## Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)  
 
 # 🔮 Future Roadmap (Upcoming Updates)
 ## 📸 OCR-Based Verification (In Progress)
