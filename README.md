@@ -113,7 +113,7 @@ One-time or recurring achievements to boost engagement.
 
 Total Score = Base Score (0-100) + Improvement Bonus (0-10) + Challenge Points
 
-![EcoScore Dashboard](./Frontend/assets/dashboard.jpeg)
+![EcoScore Dashboard](./Frontend/src/assets/dashboard.jpeg)
 
 ### 2. 🏆 Gamification & Certification
 * **Eco-Certificates:** Residents who maintain low consumption for consecutive months receive digital certificates.
