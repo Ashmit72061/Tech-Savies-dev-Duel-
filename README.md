@@ -103,23 +103,23 @@ Tech-Savies-dev-Duel-/
 
 ## Node.js installed
 
-MongoDB running locally or a cloud URI
+MongoDB running locally or a cloud URI  
 
-React Native environment set up (CLI or Expo)
+React Native environment set up (CLI or Expo)  
 
-1. Clone the Repository
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git clone [https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git](https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Tech-Savies-dev-Duel-
-2. Setup Backend
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Backend
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install
-# Create a .env file and add your MONGO_URI and PORT
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node server.js
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server will start on http://localhost:5000
-3. Setup Frontend
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ../Frontend
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm start
-# Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)
-# 👨‍💻 Contributors
-## Team Tech-Savies - Building a Greener Future, One Flat at a Time.
+1. Clone the Repository  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git clone [https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git](https://github.com/Ashmit72061/Tech-Savies-dev-Duel-.git)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Tech-Savies-dev-Duel-  
+2. Setup Backend  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Backend  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install  
+# Create a .env file and add your MONGO_URI and PORT  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node server.js  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server will start on http://localhost:5000  
+3. Setup Frontend  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ../Frontend  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm start  
+# Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)  
+# 👨‍💻 Contributors  
+## Team Tech-Savies - Building a Greener Future, One Flat at a Time.  
