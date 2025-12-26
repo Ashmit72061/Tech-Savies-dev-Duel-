@@ -43,6 +43,75 @@ This leads to excessive waste, higher costs, and a degrading local ecological zo
 ### 1. 📊 Smart Scoring Algorithm
 * Rates every flat on a scale (e.g., 1-10 or A-F grading) based on the **point average** of their monthly electricity and water consumption.
 * Dynamic comparison with society averages to highlight top performers.
+# 🧮 EcoScore Points Algorithm
+
+**Goal:** Reward sustainability and improvement, not just low consumption.  
+**Scale:** Monthly scores range from **0-150** (Base + Bonuses).  
+**Philosophy:** Progress > Perfection.
+
+---
+
+#### a. Scoring Breakdown (Monthly)
+
+The core score is calculated out of **100 points**, split into three key categories.
+
+| Category | Max Points | Weight |
+|:---|:---:|:---|
+| ⚡ **Electricity** | **40** | 40% |
+| 💧 **Water** | **40** | 40% |
+| ♻️ **Waste Segregation** | **20** | 20% |
+| **Total Base Score** | **100** | **100%** |
+
+---
+
+#### b. Calculation Logic
+
+### ⚡ Electricity (0-40 pts) & 💧 Water (0-40 pts)
+Both utilities use a **Per-Capita Efficiency Band** system. Usage is normalized by the number of residents.
+
+**Baselines (Monthly Per Person):**
+* **Electricity:** 100 kWh
+* **Water:** 3000 Liters
+
+| Usage Ratio (vs Baseline) | Efficiency Band | Points Awarded |
+|:---|:---|:---:|
+| **≤ 0.60** (Excellent) | 🟢 Green Zone | **40** |
+| **0.61 - 0.80** (Good) | 🟢 Green Zone | **35** |
+| **0.81 - 1.00** (Average) | 🟡 Improving | **30** |
+| **1.01 - 1.20** (High) | 🟡 Improving | **25** |
+| **> 1.50** (Excessive) | 🔴 High Impact | **10** |
+
+### ♻️ Waste Segregation (0-20 pts)
+Simple behavioral compliance check.
+
+* ✅ **Compliant:** 20 pts
+* ⚠️ **Partial:** 10 pts
+* ❌ **Non-Compliant:** 0 pts
+
+---
+
+#### c. Bonuses & Challenges 🚀
+
+Users can exceed the base 100 points through improvements and specific challenges.
+
+### 📈 Improvement Bonus (Max +10 pts)
+Rewards month-over-month reduction in consumption.
+* **Electricity:** +1 pt per 2 kWh reduced (Max 5)
+* **Water:** +1 pt per 2L reduced (Max 5)
+* **Better Waste Habits:** Fixed +3 pts
+
+### 🏆 Gamified Challenges (Variable pts)
+One-time or recurring achievements to boost engagement.
+* **Zero Waste Week:** +15 pts
+* **10% Reduction Goal:** +10 pts
+* **3-Month Green Streak:** +25 pts
+* **Society Goal Met:** +20 pts
+
+---
+
+#### d. Final Score Formula
+
+Total Score = Base Score (0-100) + Improvement Bonus (0-10) + Challenge Points
 
 ### 2. 🏆 Gamification & Certification
 * **Eco-Certificates:** Residents who maintain low consumption for consecutive months receive digital certificates.
