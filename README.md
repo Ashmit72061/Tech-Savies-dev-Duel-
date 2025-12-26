@@ -57,7 +57,7 @@ This leads to excessive waste, higher costs, and a degrading local ecological zo
 
 ## 🛠 Tech Stack & Architecture
 
-This application is built for **efficiency**, **scalability**, and **speed**, ensuring a seamless experience for hundreds of residents simultaneously.
+⟶ This application is built for **efficiency**, **scalability**, and **speed**, ensuring a seamless experience for hundreds of residents simultaneously.
 
 | Component | Technology | Why we chose it? |
 | :--- | :--- | :--- |
@@ -71,111 +71,111 @@ This application is built for **efficiency**, **scalability**, and **speed**, en
 
 ## 📂 Folder Structure
 
-The codebase is organized into two main directories for separation of concerns, making it easy for judges and developers to navigate.
+⟶ The codebase is organized into two main directories for separation of concerns, making it easy for judges and developers to navigate.
 
-├── Backend/
-│   ├── middleware/
-│   │   ├── fetchUser.js
-│   │   └── points-allocation-algo.md
-│   ├── models/
-│   │   ├── admin.js
-│   │   ├── communityGoal.js
-│   │   ├── consumptionRecord.js
-│   │   ├── pointsRecord.js
-│   │   ├── society.js
-│   │   ├── unit.js
-│   │   └── user.js
-│   ├── routes/
-│   │   ├── auth.js
-│   │   ├── consumption.js
-│   │   ├── goals.js
-│   │   ├── points.js
-│   │   ├── resident.js
-│   │   ├── test.js
-│   │   └── user.js
-│   ├── services/
-│   │   └── pointsService.js
-│   ├── .gitignore
-│   ├── adminDataBase.js
-│   ├── flow.txt
-│   ├── index.js
-│   ├── package-lock.json
-│   ├── package.json
-│   └── userDataBase.js
-├── Frontend/
-│   ├── public/
-│   │   └── vite.svg
-│   ├── src/
-│   │   ├── assets/
-│   │   │   └── react.svg
-│   │   ├── components/
-│   │   │   ├── atoms/
-│   │   │   │   ├── Badge.jsx
-│   │   │   │   ├── Button.jsx
-│   │   │   │   ├── Card.jsx
-│   │   │   │   ├── Icon.jsx
-│   │   │   │   └── Input.jsx
-│   │   │   ├── charts/
-│   │   │   │   └── ConsumptionTrendChart.jsx
-│   │   │   ├── molecules/
-│   │   │   │   ├── DashboardHeader.jsx
-│   │   │   │   ├── PublicNavbar.jsx
-│   │   │   │   └── Sidebar.jsx
-│   │   │   ├── settings/
-│   │   │   │   ├── NotificationSettings.jsx
-│   │   │   │   └── PrivacySettings.jsx
-│   │   │   └── ProtectedRoute.jsx
-│   │   ├── contexts/
-│   │   │   └── AuthContext.jsx
-│   │   ├── layouts/
-│   │   │   └── DashboardLayout.jsx
-│   │   ├── pages/
-│   │   │   ├── AdminDashboard.jsx
-│   │   │   ├── AdminRegistrationPage.jsx
-│   │   │   ├── CommunityGoalsPage.jsx
-│   │   │   ├── ContactUsPage.jsx
-│   │   │   ├── CreateSocietyPage.jsx
-│   │   │   ├── InputDataPage.jsx
-│   │   │   ├── LandingPage.jsx
-│   │   │   ├── LoginPage.jsx
-│   │   │   ├── ResidentDashboard.jsx
-│   │   │   ├── ResidentLoginPage.jsx
-│   │   │   ├── ResidentRegistrationPage.jsx
-│   │   │   ├── SettingsPage.jsx
-│   │   │   ├── SocietyImpactPage.jsx
-│   │   │   └── TestPage.jsx
-│   │   ├── services/
-│   │   │   ├── api.js
-│   │   │   ├── consumptionService.js
-│   │   │   ├── goalsService.js
-│   │   │   ├── pointsService.js
-│   │   │   └── userService.js
-│   │   ├── temp-htmls/
-│   │   │   ├── admin-create-new-society.html
-│   │   │   ├── admin-dashboard.html
-│   │   │   ├── admin-input-data.html
-│   │   │   ├── admin-login-screen.html
-│   │   │   ├── admin-registration.html
-│   │   │   ├── admin-society-view.html
-│   │   │   ├── community-goals.html
-│   │   │   ├── landing.html
-│   │   │   ├── resident-dashboard.html
-│   │   │   ├── resident-login.html
-│   │   │   ├── resident-registration.html
-│   │   │   ├── society-environment-impact-dashboard.html
-│   │   │   └── user-profile-setting.html
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── .env
-│   ├── .gitignore
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── README.md
-│   └── vite.config.js
-└── README.md
+├── Backend/  
+│   ├── middleware/  
+│   │   ├── fetchUser.js  
+│   │   └── points-allocation-algo.md  
+│   ├── models/  
+│   │   ├── admin.js  
+│   │   ├── communityGoal.js  
+│   │   ├── consumptionRecord.js  
+│   │   ├── pointsRecord.js  
+│   │   ├── society.js  
+│   │   ├── unit.js  
+│   │   └── user.js  
+│   ├── routes/  
+│   │   ├── auth.js  
+│   │   ├── consumption.js  
+│   │   ├── goals.js  
+│   │   ├── points.js  
+│   │   ├── resident.js  
+│   │   ├── test.js  
+│   │   └── user.js  
+│   ├── services/  
+│   │   └── pointsService.js  
+│   ├── .gitignore  
+│   ├── adminDataBase.js  
+│   ├── flow.txt  
+│   ├── index.js  
+│   ├── package-lock.json  
+│   ├── package.json  
+│   └── userDataBase.js  
+├── Frontend/  
+│   ├── public/  
+│   │   └── vite.svg  
+│   ├── src/  
+│   │   ├── assets/  
+│   │   │   └── react.svg  
+│   │   ├── components/  
+│   │   │   ├── atoms/  
+│   │   │   │   ├── Badge.jsx  
+│   │   │   │   ├── Button.jsx  
+│   │   │   │   ├── Card.jsx  
+│   │   │   │   ├── Icon.jsx  
+│   │   │   │   └── Input.jsx  
+│   │   │   ├── charts/  
+│   │   │   │   └── ConsumptionTrendChart.jsx  
+│   │   │   ├── molecules/  
+│   │   │   │   ├── DashboardHeader.jsx  
+│   │   │   │   ├── PublicNavbar.jsx  
+│   │   │   │   └── Sidebar.jsx  
+│   │   │   ├── settings/  
+│   │   │   │   ├── NotificationSettings.jsx  
+│   │   │   │   └── PrivacySettings.jsx  
+│   │   │   └── ProtectedRoute.jsx  
+│   │   ├── contexts/  
+│   │   │   └── AuthContext.jsx  
+│   │   ├── layouts/  
+│   │   │   └── DashboardLayout.jsx  
+│   │   ├── pages/  
+│   │   │   ├── AdminDashboard.jsx  
+│   │   │   ├── AdminRegistrationPage.jsx  
+│   │   │   ├── CommunityGoalsPage.jsx  
+│   │   │   ├── ContactUsPage.jsx  
+│   │   │   ├── CreateSocietyPage.jsx  
+│   │   │   ├── InputDataPage.jsx  
+│   │   │   ├── LandingPage.jsx  
+│   │   │   ├── LoginPage.jsx  
+│   │   │   ├── ResidentDashboard.jsx  
+│   │   │   ├── ResidentLoginPage.jsx  
+│   │   │   ├── ResidentRegistrationPage.jsx  
+│   │   │   ├── SettingsPage.jsx  
+│   │   │   ├── SocietyImpactPage.jsx  
+│   │   │   └── TestPage.jsx  
+│   │   ├── services/  
+│   │   │   ├── api.js  
+│   │   │   ├── consumptionService.js  
+│   │   │   ├── goalsService.js  
+│   │   │   ├── pointsService.js  
+│   │   │   └── userService.js  
+│   │   ├── temp-htmls/  
+│   │   │   ├── admin-create-new-society.html  
+│   │   │   ├── admin-dashboard.html  
+│   │   │   ├── admin-input-data.html  
+│   │   │   ├── admin-login-screen.html  
+│   │   │   ├── admin-registration.html  
+│   │   │   ├── admin-society-view.html  
+│   │   │   ├── community-goals.html  
+│   │   │   ├── landing.html  
+│   │   │   ├── resident-dashboard.html  
+│   │   │   ├── resident-login.html  
+│   │   │   ├── resident-registration.html  
+│   │   │   ├── society-environment-impact-dashboard.html  
+│   │   │   └── user-profile-setting.html  
+│   │   ├── App.jsx  
+│   │   ├── index.css  
+│   │   └── main.jsx  
+│   ├── .env  
+│   ├── .gitignore  
+│   ├── eslint.config.js  
+│   ├── index.html  
+│   ├── package-lock.json  
+│   ├── package.json  
+│   ├── README.md  
+│   └── vite.config.js  
+└── README.md  
  
 
 # 🚀 Getting Started
@@ -204,17 +204,17 @@ The codebase is organized into two main directories for separation of concerns, 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;### npm start  
 ## Press 'a' for Android or 'i' for iOS (or scan QR with Expo Go)  
 
-#🔮 Future Roadmap (Upcoming Updates)
+# 🔮 Future Roadmap (Upcoming Updates)
 ## 📸 OCR-Based Verification (In Progress)
-We are currently developing an Optical Character Recognition (OCR) module.
+⟶ We are currently developing an Optical Character Recognition (OCR) module.
 
-##Goal: In the next update, users will simply upload a photo of their utility bill. The system will automatically extract the unit consumption digits, verifying the data without manual entry.
+## Goal: In the next update, users will simply upload a photo of their utility bill. The system will automatically extract the unit consumption digits, verifying the data without manual entry.
 
-#🔌 IoT Integration
-Direct integration with smart meters to remove the need for any manual input or scanning.
+# 🔌 IoT Integration
+⟶ Direct integration with smart meters to remove the need for any manual input or scanning.
 
-#🤖 AI Integration
-Personalized tips on how to reduce bills based on usage patterns.
+# 🤖 AI Integration
+⟶ Personalized tips on how to reduce bills based on usage patterns.
 
 # 👨‍💻 Contributors  
 ## Team Tech-Savies - Building a Greener Future, One Flat at a Time.  
